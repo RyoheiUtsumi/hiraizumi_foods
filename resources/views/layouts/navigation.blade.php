@@ -15,6 +15,27 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')">
+                        {{ __('Products') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.index')">
+                        {{ __('Customers') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('reviews.index')" :active="request()->routeIs('reviews.index')">
+                        {{ __('Reviews') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('admins.index')" :active="request()->routeIs('admins.index')">
+                        {{ __('Admins') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('sellers.index')" :active="request()->routeIs('sellers.index')">
+                        {{ __('Sellers') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                        {{ __('Contact') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('shipping')" :active="request()->routeIs('shipping')">
+                        {{ __('Shipping Info') }}
+                    </x-nav-link>
                 </div>
             </div>
 
@@ -79,6 +100,27 @@
         <div class="pt-2 pb-3 space-y-1">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('products.index')" :active="request()->routeIs('products.index')">
+                {{ __('Products') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.index')">
+                {{ __('Customers') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('reviews.index')" :active="request()->routeIs('reviews.index')">
+                {{ __('Reviews') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('admins.index')" :active="request()->routeIs('admins.index')">
+                {{ __('Admins') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('sellers.index')" :active="request()->routeIs('sellers.index')">
+                {{ __('Sellers') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
+                {{ __('Contact') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('shipping')" :active="request()->routeIs('shipping')">
+                {{ __('Shipping Info') }}
             </x-responsive-nav-link>
         </div>
 
