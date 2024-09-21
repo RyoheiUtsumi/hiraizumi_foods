@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('admins', function (Blueprint $table) {
-            $table->id('admin_id'); // 管理者ID（Primary Key）
+            $table->id('id'); // 管理者ID（Primary Key）
             $table->string('name', 255); // 管理者の名前
             $table->string('email', 255)->unique(); // 管理者のメールアドレス（一意性制約付き）
             $table->string('password', 255); // ハッシュ化されたパスワード

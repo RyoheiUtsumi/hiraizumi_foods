@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('sellers', function (Blueprint $table) {
-            $table->id('seller_id'); // 売り手ID（Primary Key）
+            $table->id('id'); // 売り手ID（Primary Key）
             $table->string('name', 255); // 売り手の名前
             $table->string('email', 255)->unique(); // 売り手のメールアドレス（一意性制約付き）
             $table->string('password', 255); // ハッシュ化されたパスワード

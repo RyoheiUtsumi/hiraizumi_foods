@@ -21,7 +21,8 @@ class ProductSeeder extends Seeder
             'stock_quantity' => 100,
             'category' => 'フルーツ',
             'image_url' => 'images/benishizuka.jpg',
-            'make' => '松本さん'
+            'make' => '松本さん',
+            'seller_id' => 1, // 適切な seller_id を指定
         ]);
     }
 }

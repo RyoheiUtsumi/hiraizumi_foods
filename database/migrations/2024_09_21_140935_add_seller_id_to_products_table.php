@@ -15,7 +15,7 @@ return new class extends Migration
             // カラム追加
             $table->BigInteger('seller_id')->unsigned()->after('name');
             // カラムの外部キー制約追加
-            $table->foreign('seller_id')->references('seller_id')->on('sellers')->OnDelete('cascade');
+            $table->foreign('seller_id')->references('id')->on('sellers')->OnDelete('cascade');
 
         });
     }

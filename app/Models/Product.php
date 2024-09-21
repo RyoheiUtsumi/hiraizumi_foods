@@ -4,13 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Product extends Model
 {
     use HasFactory;
 
     // 販売者とのリレーションを定義
-    public function seller()
+    public function seller(): BelongsTo
     {
         return $this->belongsTo(Seller::class);
     }

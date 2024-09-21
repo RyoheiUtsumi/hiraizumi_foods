@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->id('review_id'); // レビューID（Primary Key）
+            $table->id('id'); // レビューID（Primary Key）
             $table->unsignedBigInteger('product_id'); // レビュー対象商品のID（Foreign Key）
             $table->unsignedBigInteger('customer_id'); // レビューをした顧客のID（Foreign Key）
             $table->integer('rating'); // 評価（1～5の数値）
@@ -20,8 +20,8 @@ return new class extends Migration
             $table->timestamps(); // created_at, updated_at
 
             // 外部キー制約
-            $table->foreign('product_id')->references('product_id')->on('products')->onDelete('cascade');
-            $table->foreign('customer_id')->references('customer_id')->on('customers')->onDelete('cascade');
+            $table->foreign('product_id')->references('id')->on('products')->onDelete('cascade');
+            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
         });
     }
 
