@@ -19,6 +19,13 @@ return new class extends Migration
             $table->integer('stock_quantity'); // 在庫の数量
             $table->string('category', 255); // 商品のカテゴリー
             $table->string('image_url', 255); // 商品画像のURL
+            $table->string('make', 255); // 生産者
+
+            // seller_id を追加して販売者とリレーションを作成
+            $table->foreignId('seller_id')
+                  ->constrained('sellers') // 'sellers' テーブルに外部キー制約をかける
+                  ->onDelete('cascade'); // 販売者が削除された場合、関連商品も削除
+
             $table->timestamps(); // created_at, updated_at
         });
     }

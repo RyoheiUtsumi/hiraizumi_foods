@@ -21,6 +21,7 @@ class ProductSeeder extends Seeder
             'stock_quantity' => 100,
             'category' => 'フルーツ',
             'image_url' => 'images/benishizuka.jpg',
+            'make' => '松本さん'
         ]);
     }
 }
