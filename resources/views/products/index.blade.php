@@ -1,4 +1,11 @@
-@extends('layouts.app')
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('平泉とれたて市場') }}
+        </h2>
+    </x-slot>
+
+{{-- @extends('layouts.app') --}}
 
 @section('content')
     <h1>商品一覧</h1>
@@ -33,3 +40,4 @@
         </tbody>
     </table>
 @endsection
+</x-app-layout>

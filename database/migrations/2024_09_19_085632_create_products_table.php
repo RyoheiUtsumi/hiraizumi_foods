@@ -22,9 +22,9 @@ return new class extends Migration
             $table->string('make', 255); // 生産者
 
             // seller_id を追加して販売者とリレーションを作成
-            $table->foreignId('seller_id')
-                  ->constrained('sellers') // 'sellers' テーブルに外部キー制約をかける
-                  ->onDelete('cascade'); // 販売者が削除された場合、関連商品も削除
+            // $table->foreignId('seller_id')
+            //    ->constrained() // 'sellers' テーブルに外部キー制約をかける
+            //    ->onDelete('cascade'); // 販売者が削除された場合、関連商品も削除
 
             $table->timestamps(); // created_at, updated_at
         });
@@ -33,8 +33,5 @@ return new class extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down(): void
-    {
-        Schema::dropIfExists('products');
-    }
+
 };
