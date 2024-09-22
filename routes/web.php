@@ -20,9 +20,9 @@ use App\Http\Controllers\StaticPagesController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+// Route::get('/', function () {
+//     return view('home');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -52,5 +52,6 @@ Route::resource('sellers', SellerController::class);
 // Static pages routes (for example, contact page, shipping info)
 Route::get('contact', [StaticPagesController::class, 'contact'])->name('contact');
 Route::get('shipping', [StaticPagesController::class, 'shipping'])->name('shipping');
+Route::get('/home', [ProductController::class, 'home'])->name('home');
 
 require __DIR__.'/auth.php';

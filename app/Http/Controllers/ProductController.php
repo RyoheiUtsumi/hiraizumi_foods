@@ -31,7 +31,7 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-$request->validate([
+        $request->validate([
             'name' => 'required|string|max:255',
             'price' => 'required|numeric',
             'seller_id' => 'required|exists:sellers,id',
@@ -88,5 +88,14 @@ $request->validate([
     {
         $product->delete();
         return redirect()->route('products.index')->with('success', '商品が削除されました');
+    }
+    
+    public function home()
+    {
+        // products テーブルから全商品を取得
+        $products = Product::all();
+
+        // home ビューに products を渡す
+        return view('home', compact('products'));
     }
 }
